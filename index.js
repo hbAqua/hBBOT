@@ -20,6 +20,11 @@ client.on("messageCreate", (Message) => {
     }
 })
 
+client.on("messageReactionAdd", (Message) => {
+    if (Message.content == "React"){
+        Message.reply("Here")
+    }
+})
 
 
 client.login(process.env.TOKEN)
